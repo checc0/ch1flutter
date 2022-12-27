@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'heroView.dart';
+import 'dart:developer';
 
 //const defultPadding = const EdgeInsets.symmetric(horizontal: 24, vertical: 16);
 const defultPadding = const EdgeInsets.symmetric(horizontal: 12, vertical: 8);
@@ -12,13 +13,23 @@ class heroesCarousel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log("item${UniqueKey().toString()}");
+    List<Widget> childs = [
+      Dismissible(
+          onDismissed: (direction) {
+            log("dfdf");
+          },
+          key: Key("item${UniqueKey().toString()}"),
+          child: SplashItem()),
+      for (final Map in heroList)
+        HeroItem(key: Key("item${UniqueKey().toString()}"), hero: Map),
+    ];
+
     return Scrollbar(
         child: SingleChildScrollView(
       physics: const AlwaysScrollableScrollPhysics(),
       child: Column(
-        children: [
-          for (final Map in heroList) HeroItem(hero: Map),
-        ],
+        children: childs,
       ),
     ));
   }
@@ -111,6 +122,31 @@ class HeroItem extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class SplashItem extends StatelessWidget {
+  const SplashItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: defultPadding,
+      child: AspectRatio(
+        aspectRatio: 4 / 3,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(8),
+          child: Stack(
+            children: [
+              Text("hello worlds")
+              //_buildParallaxBackground(context),
+              //_buildGradient(),
+              //_buildTitleAndSubtitle(),
+            ],
+          ),
+        ),
       ),
     );
   }

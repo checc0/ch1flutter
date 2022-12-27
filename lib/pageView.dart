@@ -39,7 +39,7 @@ class pageView extends StatelessWidget {
       children: <Widget>[
         Container(
             padding: EdgeInsets.only(left: 10.0),
-            height: MediaQuery.of(context).size.height * 0.35,
+            height: MediaQuery.of(context).size.height * 0.30,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: NetworkImage(page["image"]["results"][0]["fileUrl"]),
@@ -47,7 +47,7 @@ class pageView extends StatelessWidget {
               ),
             )),
         Container(
-          height: MediaQuery.of(context).size.height * 0.35,
+          height: MediaQuery.of(context).size.height * 0.30,
           padding: EdgeInsets.all(10.0),
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(color: Color.fromRGBO(58, 66, 86, .9)),
