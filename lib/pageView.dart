@@ -18,7 +18,7 @@ class pageView extends StatelessWidget {
         //Divider
         Container(
           width: 180.0,
-          child: new Divider(color: Colors.green),
+          child: Divider(color: Colors.blueGrey),
         ),
 
         SizedBox(height: 20.0),
@@ -48,7 +48,7 @@ class pageView extends StatelessWidget {
             )),
         Container(
           height: MediaQuery.of(context).size.height * 0.35,
-          padding: EdgeInsets.all(40.0),
+          padding: EdgeInsets.all(10.0),
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(color: Color.fromRGBO(58, 66, 86, .9)),
           child: Center(
