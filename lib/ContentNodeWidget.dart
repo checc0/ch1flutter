@@ -31,13 +31,15 @@ InlineSpan _render(Map item) {
   // Node processing
   switch (item["type"]) {
     case "doc":
-      return TextSpan(children: renderedContentItems);
+      return TextSpan(
+          style: TextStyle(fontSize: 20), children: renderedContentItems);
       break;
 
     case "paragraph":
       // Add CR/LF
       return TextSpan(
-          children: [...renderedContentItems, TextSpan(text: "\n\n")]);
+        children: [...renderedContentItems, TextSpan(text: "\n\n")],
+      );
       break;
 
     case "text":

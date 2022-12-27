@@ -1,24 +1,25 @@
+import 'package:ch1flutter/appConfig.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer';
 
 const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
 
-const chEndPoint = String.fromEnvironment('chEndPoint',
-    defaultValue:
-        'https://content-api.sitecorecloud.io/api/content/v1/preview/graphql');
+//const chEndPoint = String.fromEnvironment('chEndPoint',
+//    defaultValue:
+//        'https://content-api.sitecorecloud.io/api/content/v1/preview/graphql');
 
 // X-GQL-Token
-const chToken = String.fromEnvironment('chToken',
-    defaultValue:
-        'SmNmakFPVXlzUzAxRzkrR0E2bjBjQ3ZJL3d3Sk5OUTdkNlFsRGtCSUxpZz18aGMtc2FsZXMtMTItZWEtZjEwOTQ=');
+//const chToken = String.fromEnvironment('chToken',
+//    defaultValue:
+//        'SmNmakFPVXlzUzAxRzkrR0E2bjBjQ3ZJL3d3Sk5OUTdkNlFsRGtCSUxpZz18aGMtc2FsZXMtMTItZWEtZjEwOTQ=');
 
-const chAppRootID = String.fromEnvironment('chAppRootID',
-    defaultValue: 'Libej7UF9EW9UJUnY5FoNg');
+//const chAppRootID = String.fromEnvironment('chAppRootID',
+//    defaultValue: 'Libej7UF9EW9UJUnY5FoNg');
 
-const String readAppRoot = """
+String readAppRoot = """
 {
-  approot(id: "$chAppRootID") {
+  approot(id: "${appConfig.getAppRootID()}") {
     appTitle
     appIntroText
     heroes {
@@ -61,9 +62,9 @@ const String readAppRoot = """
 //
 GraphQLClient _createGQClient() {
   HttpLink httpLink = HttpLink(
-    chEndPoint,
+    appConfig.getChEndPoint(),
     defaultHeaders: {
-      'X-GQL-Token': chToken,
+      'X-GQL-Token': appConfig.getToken(),
     },
   );
 

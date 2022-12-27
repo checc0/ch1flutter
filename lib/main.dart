@@ -11,6 +11,7 @@ import 'dart:async';
 import 'SettingsWidget.dart';
 import 'fonts/meFontMap.dart';
 import 'pageView.dart';
+import 'appConfig.dart';
 
 // Portal cloud: https://portal.sitecorecloud.io/
 // Content hub one: https://content.sitecorecloud.io/?tenantName=hc-sales-12-ea-f1094
@@ -22,6 +23,11 @@ import 'pageView.dart';
 // }
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await appConfig.init();
+
+  log("value: ${appConfig.getChEndPoint()}");
+
   runApp(Ch1AppGQLoader(applicationBuilder: (node, updateFunction) {
     return MaterialApp(
         theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: darkBlue),

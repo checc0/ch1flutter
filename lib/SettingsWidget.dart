@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-//void main() => runApp(const MyApp());
+import 'appConfig.dart';
+import 'dart:developer';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -14,24 +14,24 @@ class MyApp extends StatelessWidget {
       //appBar: AppBar(
       //  title: const Text(appTitle),
       //),
-      body: const MyCustomForm(),
+      body: const SettingsForm(),
     ));
   }
 }
 
 // Create a Form widget.
-class MyCustomForm extends StatefulWidget {
-  const MyCustomForm({super.key});
+class SettingsForm extends StatefulWidget {
+  const SettingsForm({super.key});
 
   @override
-  MyCustomFormState createState() {
-    return MyCustomFormState();
+  SettingsFormState createState() {
+    return SettingsFormState();
   }
 }
 
 // Create a corresponding State class.
 // This class holds data related to the form.
-class MyCustomFormState extends State<MyCustomForm> {
+class SettingsFormState extends State<SettingsForm> {
   // Create a global key that uniquely identifies the Form widget
   // and allows validation of the form.
   //
@@ -47,7 +47,14 @@ class MyCustomFormState extends State<MyCustomForm> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // GraphQL Endpoint
           TextFormField(
+            onSaved: (newValue) {
+              appConfig.setAppRootID(newValue);
+              log("savd");
+            },
+            initialValue: appConfig.getChEndPoint(),
+            maxLines: null,
             decoration: const InputDecoration(
               border: UnderlineInputBorder(),
               labelText: 'GraphQL endpoint',
@@ -65,7 +72,14 @@ class MyCustomFormState extends State<MyCustomForm> {
               return null;
             },
           ),
+          // Tokeb
           TextFormField(
+            onSaved: (newValue) {
+              appConfig.setToken(newValue);
+            },
+
+            maxLines: null,
+            initialValue: appConfig.getToken(),
             decoration: const InputDecoration(
               border: UnderlineInputBorder(),
               labelText: 'X-GQL-Token',
@@ -80,6 +94,11 @@ class MyCustomFormState extends State<MyCustomForm> {
             },
           ),
           TextFormField(
+            onSaved: (newValue) {
+              appConfig.setAppRootID(newValue);
+            },
+            maxLines: null,
+            initialValue: appConfig.getAppRootID(),
             decoration: const InputDecoration(
               border: UnderlineInputBorder(),
               labelText: 'Application ID',
@@ -103,14 +122,17 @@ class MyCustomFormState extends State<MyCustomForm> {
                   onPressed: () {
                     // Validate returns true if the form is valid, or false otherwise.
                     if (_formKey.currentState!.validate()) {
+                      _formKey.currentState?.save();
+
                       // If the form is valid, display a snackbar. In the real world,
                       // you'd often call a server or save the information in a database.
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Processing Data')),
+                        const SnackBar(content: Text('Settings saved')),
                       );
+                      Navigator.of(context).pop();
                     }
                   },
-                  child: const Text('Submit'),
+                  child: const Text('Confirm'),
                 )),
                 Spacer(flex: 1),
                 Expanded(
