@@ -12,11 +12,11 @@ class chContentView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RichText(text: _render(contentNode));
+    return RichText(text: renderContentNode(contentNode));
   }
 }
 
-InlineSpan _render(Map item) {
+InlineSpan renderContentNode(Map item) {
   List<InlineSpan> renderedContentItems = [];
 
   //
@@ -24,7 +24,7 @@ InlineSpan _render(Map item) {
   //
   if (item["content"] != null) {
     item["content"].forEach((node) {
-      renderedContentItems.add(_render(node));
+      renderedContentItems.add(renderContentNode(node));
     });
   }
 
@@ -32,7 +32,7 @@ InlineSpan _render(Map item) {
   switch (item["type"]) {
     case "doc":
       return TextSpan(
-          style: TextStyle(fontSize: 20), children: renderedContentItems);
+          style: TextStyle(fontSize: 18), children: renderedContentItems);
       break;
 
     case "paragraph":

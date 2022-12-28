@@ -26,9 +26,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await appConfig.init();
 
-  log("value: ${appConfig.getChEndPoint()}");
-
   runApp(Ch1AppGQLoader(applicationBuilder: (node, updateFunction) {
+    // This survive at application level
+    hideSplashHero = false;
     return MaterialApp(
         theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: darkBlue),
         debugShowCheckedModeBanner: false,
@@ -178,8 +178,7 @@ class _Ch1App extends State<Ch1App> {
                     onPointerDown: _handleDownEvent,
                     // Show home page or page content if selected
                     child: _selectedMenuItem == 0
-                        ? heroesCarousel(
-                            heroList: widget.appRoot['heroes']['results'])
+                        ? heroesCarousel(appRoot: widget.appRoot)
                         : pageView(
                             page: widget.appRoot['sections']['results']
                                 [_selectedMenuItem - 1])))));

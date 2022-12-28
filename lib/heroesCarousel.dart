@@ -2,28 +2,50 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'heroView.dart';
 import 'dart:developer';
+import 'ContentNodeWidget.dart';
 
 //const defultPadding = const EdgeInsets.symmetric(horizontal: 24, vertical: 16);
 const defultPadding = const EdgeInsets.symmetric(horizontal: 12, vertical: 8);
 
-class heroesCarousel extends StatelessWidget {
-  const heroesCarousel({super.key, required this.heroList});
+// This survive at application level
+bool hideSplashHero = false;
 
-  final List heroList;
+class heroesCarousel extends StatefulWidget {
+  heroesCarousel({super.key, required this.appRoot});
+
+  final Map appRoot;
+
+  @override
+  State<heroesCarousel> createState() => _heroesCarouselState();
+}
+
+class _heroesCarouselState extends State<heroesCarousel> {
+// appRoot['heroes']['results']
 
   @override
   Widget build(BuildContext context) {
-    log("item${UniqueKey().toString()}");
     List<Widget> childs = [
-      Dismissible(
-          onDismissed: (direction) {
-            log("dfdf");
-          },
-          key: Key("item${UniqueKey().toString()}"),
-          child: SplashItem()),
-      for (final Map in heroList)
-        HeroItem(key: Key("item${UniqueKey().toString()}"), hero: Map),
+      for (final Map in widget.appRoot['heroes']['results'])
+        HeroItem(hero: Map),
     ];
+
+    //
+    // Add SlashHero if not dismissed
+    //
+    if (!hideSplashHero) {
+      childs.insert(
+          0,
+          Dismissible(
+              onDismissed: (direction) {
+                setState(() {
+                  hideSplashHero = true;
+                });
+              },
+              key: Key("splashSection"),
+              child: SplashItem(
+                appRoot: widget.appRoot,
+              )));
+    }
 
     return Scrollbar(
         child: SingleChildScrollView(
@@ -128,7 +150,9 @@ class HeroItem extends StatelessWidget {
 }
 
 class SplashItem extends StatelessWidget {
-  const SplashItem({super.key});
+  const SplashItem({super.key, required this.appRoot});
+
+  final Map appRoot;
 
   @override
   Widget build(BuildContext context) {
@@ -138,12 +162,32 @@ class SplashItem extends StatelessWidget {
         aspectRatio: 4 / 3,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(8),
-          child: Stack(
+          child: Column(
             children: [
-              Text("hello worlds")
-              //_buildParallaxBackground(context),
-              //_buildGradient(),
-              //_buildTitleAndSubtitle(),
+              Container(
+                  //padding: EdgeInsets.all(5.0),
+                  height: MediaQuery.of(context).size.height * 0.10,
+                  child: Text(
+                    appRoot["appTitle"],
+                    style: TextStyle(fontSize: 30),
+                  )
+                  //_buildParallaxBackground(context),
+                  //_buildGradient(),
+                  //_buildTitleAndSubtitle(),
+                  ),
+              Container(
+                  height: MediaQuery.of(context).size.height * 0.15,
+                  child:
+                      RichText(text: renderContentNode(appRoot["appIntroText"]))
+                  //_buildParallaxBackground(context),
+                  //_buildGradient(),
+                  //_buildTitleAndSubtitle(),
+                  ),
+              Icon(
+                Icons.swipe_left,
+                color: Colors.green,
+                size: 50.0,
+              ),
             ],
           ),
         ),
