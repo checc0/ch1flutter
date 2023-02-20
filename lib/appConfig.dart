@@ -13,8 +13,6 @@ class appConfig {
   }
 
   static String getChEndPoint() {
-    //return  prefs.getString('action');
-
     return prefs.getString("chEndPoint") ??
         String.fromEnvironment('chEndPoint',
             defaultValue:
@@ -24,19 +22,16 @@ class appConfig {
 
   static void setChEndPoint(String? endPoint) {
     prefs.setString("chEndPoint", endPoint);
-    //vehicleAge = currentYear - manufactureYear;
   }
 
   static String getAppRootID() {
     return prefs.getString("chAppRootID") ??
         String.fromEnvironment('chAppRootID',
             defaultValue: 'Libej7UF9EW9UJUnY5FoNg');
-    //return DateTime.now().year - manufactureYear;
   }
 
   static void setAppRootID(String? id) {
     prefs.setString("chAppRootID", id);
-    //vehicleAge = currentYear - manufactureYear;
   }
 
   static String getToken() {
@@ -48,6 +43,5 @@ class appConfig {
 
   static void setToken(String? token) {
     prefs.setString("chToken", token);
-    //vehicleAge = currentYear - manufactureYear;
   }
 }

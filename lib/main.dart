@@ -9,18 +9,9 @@ import 'dart:developer';
 import 'heroesCarousel.dart';
 import 'dart:async';
 import 'SettingsWidget.dart';
-import 'fonts/meFontMap.dart';
+import 'fontsMapGenerator/meFontMap.dart';
 import 'pageView.dart';
 import 'appConfig.dart';
-
-// Portal cloud: https://portal.sitecorecloud.io/
-// Content hub one: https://content.sitecorecloud.io/?tenantName=hc-sales-12-ea-f1094
-//
-// Graphql Playground https://content-api.sitecorecloud.io/api/content/v1/preview/graphql/ide/
-//
-// {
-//   "X-GQL-Token":"SmNmakFPVXlzUzAxRzkrR0E2bjBjQ3ZJL3d3Sk5OUTdkNlFsRGtCSUxpZz18aGMtc2FsZXMtMTItZWEtZjEwOTQ="
-// }
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

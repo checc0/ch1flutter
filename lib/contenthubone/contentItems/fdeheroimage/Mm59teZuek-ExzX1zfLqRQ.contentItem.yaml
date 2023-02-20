@@ -1,0 +1,32 @@
+﻿id: Mm59teZuek-ExzX1zfLqRQ
+name: Business Clothes hero
+fields:
+  heroMessage:
+    value: Our business clothes
+    type: ShortText
+  longTitle:
+    value: Elegance is not standing out, but being remembered
+    type: ShortText
+  description:
+    value: >-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus a dolor at sollicitudin. Sed tincidunt aliquet sem, nec lacinia velit. Nunc luctus felis a justo mattis dictum. Praesent dui elit, suscipit eget tincidunt id, faucibus quis nibh. Nulla non odio quis enim laoreet congue at et erat. Vivamus sem felis, aliquam nec velit ac, dignissim finibus massa. Cras venenatis ligula volutpat convallis pulvinar. Nullam mattis nunc nunc. Cras pulvinar felis eget libero vehicula commodo quis eget lectus. Suspendisse pharetra interdum tempor. Praesent finibus, ex sit amet rutrum imperdiet, justo nunc aliquam lacus, a tincidunt justo orci a justo. Aenean vulputate metus sit amet porta ultricies. Donec volutpat turpis vitae pharetra elementum. Sed accumsan odio magna. Curabitur ut augue at lorem lobortis venenatis et eu nisi.
+
+
+      Aliquam efficitur mauris sollicitudin, consectetur nisl maximus, mattis sem. Curabitur eu tristique turpis. Ut efficitur orci enim, id posuere arcu scelerisque id. Donec ex quam, tristique vel neque vel, eleifend semper nisl. Sed sed dolor magna. Nam nec augue id nulla pulvinar semper sit amet id justo. Nullam venenatis suscipit quam, vitae fringilla eros commodo sit amet. Phasellus condimentum viverra purus, vel sagittis neque aliquet vel. Aenean sit amet neque viverra, porta metus sed, feugiat elit. Suspendisse leo orci, iaculis ut metus eget, molestie volutpat neque. Quisque lacus justo, egestas nec dui non, fermentum finibus orci. Nunc luctus sagittis dui in mollis. Curabitur nec ante ornare risus mollis pulvinar sit amet nec orci. Vivamus at tortor rutrum justo lobortis dictum. Nullam accumsan arcu at dolor sagittis eleifend.
+
+
+      Donec congue, elit a dictum consectetur, tellus est hendrerit lectus, at efficitur orci nisi id felis. Nulla sagittis, nibh eu pretium accumsan, sem tortor vehicula libero, et auctor quam lacus accumsan elit. Suspendisse sit amet erat mollis purus eleifend luctus facilisis at nibh. Sed rutrum venenatis erat vitae scelerisque. Nullam blandit elit turpis, non elementum odio finibus id. Ut faucibus gravida justo, non ornare quam iaculis eget. Phasellus feugiat ante eget consectetur ullamcorper.
+
+
+      Donec feugiat lacus vel fringilla luctus. Phasellus a elementum diam, in placerat ante. Curabitur ullamcorper bibendum nisi, id tincidunt augue aliquam eget. Donec gravida est dui, sit amet malesuada sapien tempor quis. Vestibulum convallis libero nec elit pellentesque, id pretium nulla lobortis. Praesent tristique tortor vitae nulla iaculis, in rutrum arcu interdum. Cras ac bibendum arcu. Quisque consequat lorem nec pulvinar posuere. Vestibulum ac mauris nisi. Maecenas lacinia ultrices orci. Suspendisse vel sodales quam, et rhoncus dui. Nullam id arcu faucibus, dignissim nisl eu, gravida risus. Cras porta ipsum eu lacus ultricies, nec finibus odio consequat. Aliquam erat volutpat. Etiam venenatis elementum justo a tempor.
+    type: LongText
+  heroimage:
+    value:
+    - >-
+      {
+        "type": "Link",
+        "relatedType": "Media",
+        "id": "d1v5wMllzkeeR_uvdTAwzg",
+        "uri": "http://content-api-weu.sitecorecloud.io/api/content/v1/media/d1v5wMllzkeeR_uvdTAwzg"
+      }
+    type: Media

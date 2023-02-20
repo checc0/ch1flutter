@@ -17,6 +17,15 @@ const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
 //const chAppRootID = String.fromEnvironment('chAppRootID',
 //    defaultValue: 'Libej7UF9EW9UJUnY5FoNg');
 
+// Portal cloud: https://portal.sitecorecloud.io/
+// Content hub one: https://content.sitecorecloud.io/?tenantName=hc-sales-12-ea-f1094
+//
+// Graphql Playground https://content-api.sitecorecloud.io/api/content/v1/preview/graphql/ide/
+//
+// {
+//   "X-GQL-Token":"SmNmakFPVXlzUzAxRzkrR0E2bjBjQ3ZJL3d3Sk5OUTdkNlFsRGtCSUxpZz18aGMtc2FsZXMtMTItZWEtZjEwOTQ="
+// }
+
 String readAppRoot = """
 {
   approot(id: "${appConfig.getAppRootID()}") {

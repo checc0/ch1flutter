@@ -1,0 +1,112 @@
+﻿id: sE3_Z9aqL06n7b7xMjP-Og
+name: Content Hub One
+fields:
+  title:
+    value: CH1 One
+    type: ShortText
+  materialIconName:
+    value: hub
+    type: ShortText
+  summary:
+    value: >
+      Create, manage, and deliver content for any touchpoint with an agile omnichannel CMS.
+    type: LongText
+  body:
+    value: >-
+      {
+        "type": "doc",
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 3
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Begin with an agile CMS"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Start fast with a lightweight, easy-to-use solution. Build content on an intuitive UX and deliver it across channels with ease."
+              }
+            ]
+          },
+          {
+            "type": "paragraph"
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 3
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Streamline your content operations"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Add Content Hub Operations to manage your end-to-end content lifecycle when ready — from strategy to planning, collaboration to headless delivery."
+              }
+            ]
+          },
+          {
+            "type": "paragraph"
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 3
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Deliver superior web-experiences"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Add XM Cloud to meet your web experience and personalization needs for website management, visual dynamic layout and content editing, headless delivery with freedom of choice for framework development."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "OMNICHANNEL DIGI"
+              }
+            ]
+          }
+        ]
+      }
+    type: RichText
+  issueDate:
+    value: 2022-12-14T00:00:00.0000000+01:00
+    type: DateTime
+  image:
+    value:
+    - >-
+      {
+        "type": "Link",
+        "relatedType": "Media",
+        "id": "PLoH8Omj_0eNaP9wb8lWtw",
+        "uri": "http://content-api-weu.sitecorecloud.io/api/content/v1/media/PLoH8Omj_0eNaP9wb8lWtw"
+      }
+    type: Media

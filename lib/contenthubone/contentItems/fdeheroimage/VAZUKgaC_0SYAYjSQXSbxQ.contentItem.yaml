@@ -1,0 +1,22 @@
+﻿id: VAZUKgaC_0SYAYjSQXSbxQ
+name: Mount Rushmore
+fields:
+  heroMessage:
+    value: Mount Rushmore
+    type: ShortText
+  longTitle:
+    value: The Mount Rushmore National Memorial
+    type: ShortText
+  description:
+    value: Quisque risus risus, rutrum nec orci quis, iaculis accumsan metus. Suspendisse efficitur fermentum velit eget condimentum. Sed lectus quam, bibendum eu luctus id, rutrum eu magna. Nunc aliquet, felis ut volutpat lacinia, lacus eros elementum purus, ac tempus lectus velit vitae urna. Aliquam eget volutpat quam. Pellentesque viverra at lacus sit amet vehicula. Fusce consectetur, eros eu egestas tincidunt, massa nisl faucibus ex, ut tempor nisl tellus quis tortor. Nullam non lobortis mauris, ac accumsan ipsum. Aenean finibus justo nunc, sit amet sollicitudin enim euismod quis. Aenean placerat nunc eu risus dapibus, sit amet dictum turpis gravida. Donec pellentesque mauris eget nunc commodo, nec molestie est sollicitudin. Sed sit amet porttitor nunc. Morbi malesuada laoreet erat sit amet congue. Fusce et tincidunt ante.
+    type: LongText
+  heroimage:
+    value:
+    - >-
+      {
+        "type": "Link",
+        "relatedType": "Media",
+        "id": "SV-nUq3P4kSpz8073H7aLg",
+        "uri": "http://content-api-weu.sitecorecloud.io/api/content/v1/media/SV-nUq3P4kSpz8073H7aLg"
+      }
+    type: Media

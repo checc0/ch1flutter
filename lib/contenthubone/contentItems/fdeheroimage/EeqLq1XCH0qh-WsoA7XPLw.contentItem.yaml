@@ -1,0 +1,29 @@
+﻿id: EeqLq1XCH0qh-WsoA7XPLw
+name: Bags for everyone
+fields:
+  heroMessage:
+    value: Bags for everyone
+    type: ShortText
+  longTitle:
+    value: With only one bag, you can change your outfit completely
+    type: ShortText
+  description:
+    value: >-
+      Cras quis enim id libero dignissim eleifend sit amet faucibus sapien. In venenatis mollis neque. Sed quis justo sollicitudin, convallis lacus eu, scelerisque nulla. Nulla quis nibh accumsan, facilisis nunc eget, consequat lorem. Proin ultrices nunc nec sollicitudin faucibus. Cras urna ipsum, malesuada vitae augue in, pellentesque pharetra tellus. Mauris mollis molestie dolor non commodo. Integer efficitur lacus nec neque faucibus, vel vulputate tellus rutrum. Vestibulum vulputate, felis ac accumsan tempor, dolor lacus gravida ex, eget blandit nunc mauris vel purus. Nullam ac justo lacinia, congue diam vitae, euismod ex. Curabitur mollis sodales scelerisque. Morbi mi augue, varius vel tincidunt eu, auctor vitae ex. Aenean hendrerit aliquet interdum. Donec vitae nisl ut arcu egestas elementum ultrices vitae justo.
+
+
+      Proin luctus commodo dui. Nulla luctus, felis vitae interdum varius, ex ex ullamcorper urna, a aliquam libero mauris ut diam. Morbi mauris nunc, tincidunt sit amet turpis nec, laoreet consectetur lacus. Suspendisse rhoncus feugiat sollicitudin. Aenean volutpat at massa quis mollis. Fusce non nisl id purus vulputate vulputate. Maecenas vitae nunc id lorem sollicitudin convallis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec luctus urna turpis. Suspendisse potenti. Quisque lobortis efficitur tristique. Suspendisse ultricies risus varius fermentum eleifend.
+
+
+      Vivamus euismod tellus vehicula sapien vehicula vestibulum. Ut enim quam, efficitur eget ipsum quis, tempor mollis lacus. Donec non hendrerit arcu. Nullam in malesuada urna. Duis egestas ante at justo dictum iaculis. Integer rhoncus pretium libero sed egestas. Sed vel dui eget dolor faucibus fringilla. Sed urna turpis, hendrerit id tortor at, ornare dignissim tortor. Aenean dictum ipsum nec tellus pharetra tempor. Cras vitae ligula sed leo laoreet tincidunt sit amet pellentesque odio. Curabitur porttitor nisl nec lobortis suscipit. Mauris gravida semper quam, eget ornare lectus ultrices sit amet. Fusce sollicitudin tincidunt nisi, ac faucibus erat lobortis a. Nullam eros felis, aliquet at ex id, gravida mattis arcu. Ut et commodo est.
+    type: LongText
+  heroimage:
+    value:
+    - >-
+      {
+        "type": "Link",
+        "relatedType": "Media",
+        "id": "yBNvjsda5EK_KA8gqMiPyg",
+        "uri": "http://content-api-weu.sitecorecloud.io/api/content/v1/media/yBNvjsda5EK_KA8gqMiPyg"
+      }
+    type: Media

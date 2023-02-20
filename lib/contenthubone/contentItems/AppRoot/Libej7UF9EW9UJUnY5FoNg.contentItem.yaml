@@ -1,0 +1,124 @@
+﻿id: Libej7UF9EW9UJUnY5FoNg
+name: Mobile application
+fields:
+  appTitle:
+    value: El Tartarugaro
+    type: ShortText
+  appIntroText:
+    value: >-
+      {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Welcome to El Tartarugaro Experience !"
+              },
+              {
+                "type": "hardBreak"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Browse explore our catalog below or choose a section"
+              },
+              {
+                "type": "hardBreak"
+              },
+              {
+                "type": "text",
+                "text": "from the bottom navigation bar."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Enjoy !"
+              }
+            ]
+          },
+          {
+            "type": "paragraph"
+          },
+          {
+            "type": "paragraph"
+          },
+          {
+            "type": "paragraph"
+          },
+          {
+            "type": "paragraph"
+          },
+          {
+            "type": "paragraph"
+          },
+          {
+            "type": "paragraph"
+          }
+        ]
+      }
+    type: RichText
+  heroes:
+    value:
+    - >-
+      {
+        "type": "Link",
+        "relatedType": "Content",
+        "id": "V3rEerQQL0CDPMwWgFtcbQ",
+        "uri": "http://content-api-weu.sitecorecloud.io/api/content/v1/items/V3rEerQQL0CDPMwWgFtcbQ"
+      }
+    - >-
+      {
+        "type": "Link",
+        "relatedType": "Content",
+        "id": "_ctbohbFI0WgFlVxrxVFAw",
+        "uri": "http://content-api-weu.sitecorecloud.io/api/content/v1/items/_ctbohbFI0WgFlVxrxVFAw"
+      }
+    - >-
+      {
+        "type": "Link",
+        "relatedType": "Content",
+        "id": "VAZUKgaC_0SYAYjSQXSbxQ",
+        "uri": "http://content-api-weu.sitecorecloud.io/api/content/v1/items/VAZUKgaC_0SYAYjSQXSbxQ"
+      }
+    - >-
+      {
+        "type": "Link",
+        "relatedType": "Content",
+        "id": "06rfKULqakmIqqH0oNi97w",
+        "uri": "http://content-api-weu.sitecorecloud.io/api/content/v1/items/06rfKULqakmIqqH0oNi97w"
+      }
+    type: Reference
+  sections:
+    value:
+    - >-
+      {
+        "type": "Link",
+        "relatedType": "Content",
+        "id": "MJbRlYX5nECWYX7npXlkuA",
+        "uri": "http://content-api-weu.sitecorecloud.io/api/content/v1/items/MJbRlYX5nECWYX7npXlkuA"
+      }
+    - >-
+      {
+        "type": "Link",
+        "relatedType": "Content",
+        "id": "sE3_Z9aqL06n7b7xMjP-Og",
+        "uri": "http://content-api-weu.sitecorecloud.io/api/content/v1/items/sE3_Z9aqL06n7b7xMjP-Og"
+      }
+    - >-
+      {
+        "type": "Link",
+        "relatedType": "Content",
+        "id": "FymgPvA3rEuxrvmooIvX4g",
+        "uri": "http://content-api-weu.sitecorecloud.io/api/content/v1/items/FymgPvA3rEuxrvmooIvX4g"
+      }
+    type: Reference
